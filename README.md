@@ -43,3 +43,7 @@ Use bundlr to build and serve the site at [http://127.0.0.1:4000/](http://127.0.
 ```bash
 bundle exec jekyll serve
 ```
+
+<hr>
+
+Special thanks to [Chester How](https://chester.how) for providing the [Tale theme](https://github.com/chesterhow/tale) that this site is based on.
