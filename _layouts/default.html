@@ -7,7 +7,11 @@
     <nav class="nav">
       <div class="nav-container">
         <a href="{{ site.baseurl }}/">
-          <h2 class="nav-title">{{ site.title }}</h2>
+          {% if page.title == "Home" %}
+            <h2 class="nav-title">{{ site.title }}</h2>
+          {% else %}
+            <h2 class="nav-title">{{ site.title }} - Technical knowledge share.</h2>
+          {% endif %}
         </a>
       </div>
     </nav>
