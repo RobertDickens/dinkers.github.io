@@ -32,6 +32,12 @@ Use ruby to install the [bundlr](https://bundler.io) and [jekyll](https://jekyll
 gem install bundler jekyll
 ```
 
+Use bundlr to install the dependencies:
+
+```bash
+bundle install
+```
+
 Use bundlr to build and serve the site at [http://127.0.0.1:4000/](http://127.0.0.1:4000/):
 
 ```bash
