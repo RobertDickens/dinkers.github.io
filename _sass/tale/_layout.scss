@@ -13,6 +13,23 @@ footer,
   width: 80%;
 }
 
+.header {
+  text-align: center;
+
+  h1 {
+    font-family: Muli, sans-serif;
+    font-weight: 200;
+    font-size: 6em;
+  }
+
+  h2 {
+    font-family: Muli, sans-serif;
+    font-weight: 200;
+    font-size: 2em;
+  }
+
+}
+
 .nav {
   box-shadow: 0 2px 2px -2px $shadow-color;
   overflow: auto;
@@ -24,6 +41,7 @@ footer,
   }
 
   &-title {
+    font-family: Muli, sans-serif;
     @include transition(all .2s ease-out);
     color: $default-color;
     display: inline-block;
