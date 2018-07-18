@@ -1,8 +1,8 @@
 # Site settings
-title:          Tale
-description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
-url:            "https://chesterhow.github.io"
+title:          Dinkers
+description:    "Knowledge share for a group of developers"
+# baseurl:        "/tale"
+# url:            "https://chesterhow.github.io"
 
 # Author
 author:
