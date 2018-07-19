@@ -28,6 +28,8 @@ permalink:      /:categories/:title
 
 # Collections
 collections:
+  posts:
+    output: false
   python:
     output: true
     description: Python documents
