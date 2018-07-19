@@ -24,12 +24,16 @@ plugins:
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:categories/:title
+permalink:      /:collections/:title
 
 # Collections
 collections:
-  posts:
-    output: false
   python:
     output: true
     description: Python documents
+  dev-ops:
+    output: true
+    description: Server side stuff
+  static-sites:
+    output: true
+    description: Static site stuff
