@@ -8,18 +8,17 @@ layout: default
 </div>
 
 <div class="catalogue">
-  {% for collection in site.collections %}
-    <a href="{{ collection.url | prepend: site.baseurl }}" class="catalogue-item">
+  {% for post in paginator.posts %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
       <div>
-        <h1 class="catalogue-title">{{ collection.label | capitalize }}</h1>
+        <h1 class="catalogue-title">{{ post.title }}</h1>
         <div class="catalogue-line"></div>
 
         <p>
-          {{ collection.description }}
+          {{ post.description }}
         </p>
 
       </div>
     </a>
   {% endfor %}
 </div>
-

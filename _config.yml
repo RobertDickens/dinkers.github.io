@@ -20,9 +20,14 @@ sass:
 
 # Gems
 plugins:
-  - jekyll-paginate
+  # - jekyll-paginate
   # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
-permalink:      /:year-:month-:day/:title
-paginate:       5
+permalink:      /:categories/:title
+
+# Collections
+collections:
+  python:
+    output: true
+    description: Python documents
