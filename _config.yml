@@ -1,14 +1,27 @@
+github: [metadata]
+ encoding: UTF-8
+ kramdown:
+   input: GFM
+   hard_wrap: false
+ future: true
+ jailed: false
+ gfm_quirks: paragraph_end
+
 # Site settings
 title:          Dinkers
 description:    "Knowledge share for a group of developers"
 # baseurl:        "/tale"
 # url:            "https://chesterhow.github.io"
 
-# Author
 author:
-  name:         Chester How
-  url:          https://chester.how
-  email:        chesterhow@gmail.com
+  name:         Kayra Alat
+  url:          https://kayra.co.uk
+
+# Author of tale theme that this site is based on
+# author:
+#   name:         Chester How
+#   url:          https://chester.how
+#   email:        chesterhow@gmail.com
 
 # Build settings
 markdown:       kramdown
@@ -18,10 +31,6 @@ sass:
   sass_dir:     _sass
   style:        compressed
 
-# Gems
-plugins:
-  # - jekyll-paginate
-  # - jemoji #Uncomment this to allow emoji in your post
 
 # Permalinks
 permalink:      /:collections/:title
