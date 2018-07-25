@@ -3,22 +3,28 @@ layout: default
 ---
 
 <div class="header">
-  <h1>{{ page.collection.label }}</h1>
+  <h1>{{ site.python.description }} stuff</h1>
   <h2>Technical knowledge share.</h2>
 </div>
 
 <div class="catalogue">
-  {% for post in page.collection %}
-    <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
-      <div>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
-        <div class="catalogue-line"></div>
 
-        <p>
-          {{ post.description }}
-        </p>
+  {% for collection in site.collections %}
+    {% if collection.label != "posts" %}
 
-      </div>
-    </a>
+      <a href="{{ collection.label | prepend: site.baseurl }}" class="catalogue-item">
+        <div>
+          <h1 class="catalogue-title">{{ collection.label | capitalize }}</h1>
+          <div class="catalogue-line"></div>
+
+          <p>
+            {{ collection.description }}
+          </p>
+
+        </div>
+      </a>
+
+    {% endif %}
   {% endfor %}
+
 </div>
