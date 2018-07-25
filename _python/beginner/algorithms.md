@@ -2,7 +2,7 @@
 layout: post
 title:  "Algorithms"
 description: "An algorithm is a mechanical process for solving a category of problems."
-categories: [beginner]
+categories: beginner
 ---
 
 An algorithm is a mechanical process for solving a category of problems.

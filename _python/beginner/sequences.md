@@ -2,7 +2,7 @@
 layout: post
 title:  "Sequences"
 description: "A brief overview on deciding which squence data type to use."
-categories: [beginner]
+categories: beginner
 ---
 
 **Strings** are very limited in use due to the fact that their elements must be characters. Because they are immutable, it may be more beneficial to use a list of characters for computation, then `join()` afterward.
