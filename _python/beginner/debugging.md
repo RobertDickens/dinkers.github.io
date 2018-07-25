@@ -5,8 +5,6 @@ description: "Tips for debugging a Python programming problem."
 categories: beginner
 ---
 
-# Debugging
-
 ## If a function is not working, there are three possibilities to consider.
 
 * There is something wrong with the arguments the function is getting; a precondition is violated.
