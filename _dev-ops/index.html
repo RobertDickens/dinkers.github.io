@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: /:collection/index.html
+---
+
+{% assign dev_ops = site.collections | where: "label", "dev-ops" | first %}
+
+<div class="header">
+  <h1>{{ dev_ops.label | capitalize }}</h1>
+  <h2>{{ dev_ops.description }}</h2>
+</div>
+
+<div class="catalogue">
+
+  {% for post in site.dev-ops %}
+    {% if post.title != "Index" %}
+
+      <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+        <div>
+          <h1 class="catalogue-title">{{ post.title | capitalize }}</h1>
+          <div class="catalogue-line"></div>
+
+          <p>
+            {{ post.description }}
+          </p>
+
+        </div>
+      </a>
+
+    {% endif %}
+  {% endfor %}
+
+</div>
