@@ -56,20 +56,3 @@ Include links to CDN in the head of the document:
 ## 5 Write js
 
 ## 6 Deploy
-
-	git archive -o SITE.zip HEAD
-
-	scp SITE.zip kayra@104.131.166.69:/home/kayra
-
-	rm SITE.zip
-
-	ssh kayra@104.131.166.69
-
-	sudo mv SITE.zip /var/www/html/
-
-	cd /var/www/html
-
-	sudo unzip SITE.zip -d SITE.co.uk
-
-	sudo rm SITE.zip
-

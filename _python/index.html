@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Python
 permalink: /:collection/index.html
 ---
 
@@ -14,7 +13,7 @@ permalink: /:collection/index.html
 <div class="catalogue">
 
   {% for post in site.python %}
-    {% if post.title != "Python" %}
+    {% if post.title != "Index" %}
 
       <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
         <div>

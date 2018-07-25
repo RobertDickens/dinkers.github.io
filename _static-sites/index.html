@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Static Sites
 permalink: /:collection/index.html
 ---
 
@@ -14,7 +13,7 @@ permalink: /:collection/index.html
 <div class="catalogue">
 
   {% for post in site.static-sites %}
-    {% if post.title != "Static Sites" %}
+    {% if post.title != "Index" %}
 
       <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
         <div>
