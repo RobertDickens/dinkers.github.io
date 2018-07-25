@@ -1,12 +1,3 @@
-github: [metadata]
- encoding: UTF-8
- kramdown:
-   input: GFM
-   hard_wrap: false
- future: true
- jailed: false
- gfm_quirks: paragraph_end
-
 # Site settings
 title:          Dinkers
 description:    "Knowledge share for a group of developers"
