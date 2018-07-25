@@ -33,7 +33,7 @@ collections:
     description: Everything you need to be useful with the Python programming language.
   dev-ops:
     output: true
-    description: Server side stuff
+    description: Server configuration documentation.
   static-sites:
     output: true
     description: Useful tips, tools, and workflows for creating static websites.

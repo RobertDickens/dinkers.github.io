@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "AWS descriptions"
+description: "A brief overview of what each Amazon Web Service actually does."
+---
+
 # Compute services
 
 ## EC2 - Elastic Cloud Compute
@@ -85,7 +91,7 @@ Migrate virtual and physical servers from 'on premises' to AWS (can be tracked w
 ## Snowball
 
 Migrate large amounts of data into the data centre (terabytes).
- 
+
 # Networking and Content Delivery
 
 ## VPC - Virtual Private Cloud
