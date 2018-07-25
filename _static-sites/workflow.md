@@ -1,4 +1,8 @@
-# Static Website
+---
+layout: post
+title:  "Static site workflow"
+description: "Step by step instructions for creating a simple responsive static site."
+---
 
 ## 1 Create the structure
 

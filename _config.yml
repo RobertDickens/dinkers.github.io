@@ -36,4 +36,4 @@ collections:
     description: Server side stuff
   static-sites:
     output: true
-    description: Static site stuff
+    description: Useful tips, tools, and workflows for creating static websites.
