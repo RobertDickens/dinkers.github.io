@@ -1,6 +1,7 @@
 # Site settings
 title:          Dinkers
 description:    "Knowledge share for a group of developers"
+root: dinkers
 # baseurl:        "/tale"
 # url:            "https://chesterhow.github.io"
 
