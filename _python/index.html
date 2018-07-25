@@ -4,14 +4,17 @@ title: Python
 permalink: /:collection/index.html
 ---
 
+{% assign python = site.collections | where: "label", "python" | first %}
+
 <div class="header">
-  <h1>Python</h1>
-  <h2>{{ site.python.description }}</h2>
+  <h1>{{ python.label | capitalize }}</h1>
+  <h2>{{ python.description }}</h2>
 </div>
 
 <div class="catalogue">
 
   {% for post in site.python %}
+    {% if post.title != "Python" %}
 
       <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
         <div>
@@ -25,6 +28,7 @@ permalink: /:collection/index.html
         </div>
       </a>
 
+    {% endif %}
   {% endfor %}
 
 </div>
