@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sequences"
-description: "A brief overview on deciding which squence data type to use."
+description: "A brief overview of sequence data types to help decide which squence to use."
 categories: beginner
 ---
 

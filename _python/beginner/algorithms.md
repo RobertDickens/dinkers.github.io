@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Algorithms"
-description: "An algorithm is a mechanical process for solving a category of problems."
+description: "A mechanical process for solving a category of problems."
 categories: beginner
 ---
 
@@ -11,7 +11,7 @@ An example of this would be to translate a mathematical formula to Python code (
 
 Newton's method of finding the square root of a number is as follows:
 
-``` python
+```python
 y = (x + a/x) / 2
 ```
 
