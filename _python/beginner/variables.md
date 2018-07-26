@@ -69,7 +69,6 @@ UnboundLocalError: local variable 'has_been_run' referenced before assignment
 
 **This rule does not apply to mutable variables. They can be modified without declaring the variable as global.**
 
-
 ## Memos
 
 A previously computed value that is stored for later use is called a **memo**. The computation is memorised and stored for efficiency.
