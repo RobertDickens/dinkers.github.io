@@ -64,3 +64,10 @@ img {
 td {
   vertical-align: top;
 }
+
+
+@media (min-width: 600px) {
+  .right {
+    float: right;
+  }
+}

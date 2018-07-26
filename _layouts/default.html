@@ -17,10 +17,7 @@
 
         {% for collection in site.collections %}
           {% if page.url contains collection.label %}
-            <ul>
-              <!-- {{collection.label}} + {{site.baseurl}} -->
-              <li><a href="{{ site.url }}/{{ collection.label }}">{{ collection.label | capitalize }}</a></li>
-            </ul>
+              <h2 class="nav-title right"><a href="{{ site.url }}/{{ collection.label }}">{{ collection.label | capitalize }}</a></h2>
           {% endif %}
         {% endfor %}
 
