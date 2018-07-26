@@ -3,7 +3,6 @@ title:          Dinkers
 description:    "Knowledge share for a group of developers"
 root:           dinkers
 baseurl:        "/"
-# url:            "https://chesterhow.github.io"
 
 author:
   name:         Kayra Alat
@@ -29,12 +28,15 @@ permalink:      /:collections/:title
 
 # Collections
 collections:
+
   python:
     output: true
     description: Everything you need to be useful with the Python programming language.
+
   dev-ops:
     output: true
     description: Server configuration documentation.
+
   static-sites:
     output: true
     description: Useful tips, tools, and workflows for creating static websites.
