@@ -6,6 +6,7 @@
   <body>
     <nav class="nav">
       <div class="nav-container">
+
         <a href="{{ site.baseurl }}/">
           {% if page.title == "Home" %}
             <h2 class="nav-title">{{ site.title }}</h2>
@@ -13,11 +14,19 @@
             <h2 class="nav-title">{{ site.title }} - Technical knowledge share.</h2>
           {% endif %}
         </a>
+
+        {% for collection in site.collections %}
+          {% if page.url contains collection.label %}
+              <h2 class="nav-title right"><a href="{{ site.url }}/{{ collection.label }}">{{ collection.label | capitalize }}</a></h2>
+          {% endif %}
+        {% endfor %}
+
       </div>
     </nav>
 
     <main>
       {{ content }}
+      {{ site.baseurl }}
     </main>
 
   </body>
