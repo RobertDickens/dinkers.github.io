@@ -5,7 +5,6 @@ description: "A function that calls itself until a condition is met."
 categories: beginner
 ---
 
-
 A recursive function is a function that calls itself until a condition is met.
 
 ```python

@@ -5,13 +5,11 @@ description: "The Python implementation of a hashmap."
 categories: beginner
 ---
 
-A dictionary is a mapping.
-
-A dictionary contains a collection of indices, which are called keys, and a collection of values. Each key is associated with a single value. The association of a key and a value is called a **key-value pair**, or sometimes an **item**.
+A dictionary is a mapping; it contains a collection of indices, which are called keys, and a collection of values. Each key is associated with a single value. The association of a key and a value is called a **key-value pair**, or sometimes an **item**.
 
 Unlike lists, dictionaries are **unordered**.
 
-``` python
+```python
 >>> english_to_spanish = {
 	"one": "uno",
 	"two": "dos",
@@ -24,21 +22,21 @@ Unlike lists, dictionaries are **unordered**.
 
 However, the ordering is unimportant as dictionaries aren't indexed by integer indices. Instead, the defined keys are used to look up the corresponding values.
 
-``` python
+```python
 >>> print(english_to_spanish["two"])
 "dos"
 ```
 
 If a key does not exist in the dictionary, a `KeyError` is returned.
 
-``` python
+```python
 >>> print(english_to_spanish["four"])
 KeyError: "four"
 ```
 
 The `in` conditional operator can be used to see if a **key** is in the dictionary, but not the **value**.
 
-``` python
+```python
 >>> "one" in english_to_spanish
 True
 
@@ -48,14 +46,14 @@ False
 
 The `in` conditional operator can be used with the `values()` method, which returns a [dictionary view object](https://docs.python.org/3.0/library/stdtypes.html#dictionary-view-objects) making a list of values accessible.
 
-``` python
+```python
 >>> "uno" in english_to_spanish.values()
 True
 ```
 
-### Methods
+## Methods
 
-``` python
+```python
 >>> english_to_spanish = {
 	"one": "uno",
 	"two": "dos",
@@ -65,7 +63,7 @@ True
 
 `get` returns a value for a provided key. If the key is not in the dict, the method will either return `None` or a specified value.
 
-``` python
+```python
 >>> english_to_spanish.get("one")
 "uno"
 
@@ -78,7 +76,7 @@ False
 
 `setdefault` is similar to `get`, but will set the key to a value if it doesn't exist.
 
-``` python
+```python
 >>> english_to_spanish.get("four")
 None
 
@@ -88,7 +86,7 @@ None
 
 `clear` removes all elements of a dictionary.
 
-``` python
+```python
 >>> english_to_spanish.clear()
 >>> print(english_to_spanish.clear)
 {}
@@ -96,7 +94,7 @@ None
 
 `copy` returns a copy of a dictionary.
 
-``` python
+```python
 >>> print(english_to_spanish)
 {"one": "uno", "two": "dos", "three": "tres"}
 
@@ -113,7 +111,7 @@ None
 
 `fromkeys` creates a new dictionary with keys from a sequence and a possible default value.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> letters_dict = dict.fromkeys(letters)
 >>> print(letters_dict)
@@ -126,7 +124,7 @@ None
 
 `update` adds a dictionary to another.
 
-``` python
+```python
 >>> english_to_spanish_continued = {
 	"four": "cuatro",
 	"five": "cinco",
@@ -138,16 +136,15 @@ None
 {"one": "uno", "two": "dos", "three": "tres", "four": "cuatro", "five": "cinco", "six": "seis"}
 ```
 
-### Hashing
+## Hashing
 
 A hash is a function that takes a value (of any kind) and returns an integer. Dictionaries use these integers, called **hash values**, to store and look up key-value pairs.
 
 When creating a key-value pair, Python hashes the key and stores it in the corresponding memory location. If the key is modified and used to search again, it would go to a different memory location and return an invalid value.
 
-**Because of this, dictionary keys must be immutable. **
+**Because of this, dictionary keys must be immutable.**
 
-
-### Dictionary as collection of counters
+## Dictionary as collection of counters
 
 A **histogram** is a statistical term for a collection of counters (or frequencies). A form of this would be a function that counts how many of each character occurs in a string.
 
@@ -168,7 +165,7 @@ def histogram(string):
 	return counter_dict
 ```
 
-### Comprehension
+## Comprehension
 
 A dictionary comprehension is an elegant, concise way of dynamically creating a dictionary.
 
@@ -180,7 +177,7 @@ A dictionary comprehension is an elegant, concise way of dynamically creating a 
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 ```
 
-### Looping
+## Looping
 
 To loop through all the values in a dictionary, it is easiest to use a `for` loop.
 
@@ -198,7 +195,7 @@ three tres
 two dos
 ```
 
-### Reverse look up
+## Reverse look up
 
 If the key is known for a desired value in a dictionary, finding the value is a simple process called a `look up`.
 

@@ -1,38 +1,38 @@
 ---
 layout: post
 title:  "Lists"
-description: "A list is a series of values of any type."
-categories: [python]
+description: "A sequence of values of any type."
+categories: beginner
 ---
 
-A list is a series of values of any type.
+A list is a sequence of values of any type.
 
-``` python
+```python
 >>> animals = ["ox", "wolf", "leopard"]
 ```
 
 A single list can contain a variety of types:
 
-``` python
+```python
 >>> example_list = ["text", 4, 3.432, ["nested_list", 43, 0]]
 ```
 
-### Mutable
+## Mutable
 
 Values in a list can be changed individually without creating a new list.
 
-``` python
+```python
 >>> animals = ["ox", "wolf", "leopard"]
 >>> animals[1] = "bear"
 >>> print(animals)
 ["ox", "bear", "leopard"]
 ```
 
-### Operations
+## Operations
 
 The `+` operator concatenates lists:
 
-``` python
+```python
 >>> first_list = [1, 2, 3]
 >>> second_list = [4, 5, 6]
 
@@ -43,7 +43,7 @@ The `+` operator concatenates lists:
 
 The `*` operator repeats a list a given number of times:
 
-``` python
+```python
 >>> [0] * 4
 [0, 0, 0, 0]
 
@@ -51,11 +51,11 @@ The `*` operator repeats a list a given number of times:
 [1, 2, 3, 1, 2, 3, 1, 2, 3]
 ```
 
-### Slices
+## Slices
 
 A slice is a segment of a list. This can also be accessed with the bracket operator.
 
-``` python
+```python
 >>> letters = ["a", "b", "c", "d", "e", "f", "g"]
 >>> letters_list_slice = letters[1:3]
 
@@ -67,7 +67,7 @@ Accessing a slice with the bracket notation will return all the elements between
 
 It is also possible to slice a list with one number and a colon.
 
-``` python
+```python
 >>> letters_list_slice = letters[:3]
 >>> print(letters_list_slice)
 ["a", "b", "c"]
@@ -86,7 +86,7 @@ Accessing a slice with no indices will result in a full list slice.
 
 A slice operator on the left side of an assignment can update multiple elements in the list at once.
 
-``` python
+```python
 >>> letters = ["a", "b", "c", "d", "e", "f", "g"]
 >>> letters[1:4] = ["x", "y", "z"]
 
@@ -94,12 +94,11 @@ A slice operator on the left side of an assignment can update multiple elements 
 ["a", "x", "y", "z", "e", "f", "g"]
 ```
 
-
-### Methods
+## Methods
 
 `append` adds a new element to the end of a list.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> letters.append("d")
 
@@ -109,7 +108,7 @@ A slice operator on the left side of an assignment can update multiple elements 
 
 `extend` takes a list and appends all of the elements to another list. This will leave the list being appended unmodified.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> next_letters = ["d", "e", "f"]
 >>> letters.extend(next_letters)
@@ -123,7 +122,7 @@ A slice operator on the left side of an assignment can update multiple elements 
 
 `sort` arranges the elements of the list from low to high.
 
-``` python
+```python
 >>> letters = ["g", "c", "e", "d", "b", "f", "a"]
 >>> letters.sort()
 
@@ -133,7 +132,7 @@ A slice operator on the left side of an assignment can update multiple elements 
 
 Most list methods are void. They modify the list and return `None`
 
-``` python
+```python
 >>> letters = ["g", "c", "e", "d", "b", "f", "a"]
 >>> sorted_list = letters.sort()
 
@@ -141,8 +140,7 @@ Most list methods are void. They modify the list and return `None`
 None
 ```
 
-
-### Map, filter and reduce
+## Map, filter and reduce
 
 Most common list operations can be expressed as a combination of map, filter or reduce.
 
@@ -152,7 +150,7 @@ A **map** is an operation that performs a function on each element in a sequence
 
 An example of this can be seen in creating a small function that takes a list of strings and returns a list of capitalised strings.
 
-``` python
+```python
 def capitalise_strings(list_of_strings):
 
 	list_of_capitalised_strings = []
@@ -169,7 +167,7 @@ A **filter** is an operation that selects some of elements of a sequence and fil
 
 An example of this can be see in creating a small function that returns a sublist of only the uppercase strings from a list of strings.
 
-``` python
+```python
 def only_uppercase_strings(list_of_strings):
 
 	list_of_uppercase_strings = []
@@ -187,7 +185,7 @@ A **reduce** is an operation that combines a sequence of elements into a single 
 
 An example of this can be seen in creating a small function to sum all numbers in a list.
 
-``` python
+```python
 def add_all_list_integers(list_of_integers):
 
 	total = 0
@@ -200,21 +198,21 @@ def add_all_list_integers(list_of_integers):
 
 Because adding all the numbers in a list is such a common operation, Python provides a built-in function to do this:
 
-``` python
+```python
 >>> list_of_numbers = [1, 2, 3]
 >>> print(sum(list_of_numbers))
 6
 ```
 
-### Deleting elements
+## Deleting elements
 
 There are several ways to delete elements from a list.
 
-#### Pop
+### Pop
 
 `pop` takes an index, modifies the list to remove the vaue at that index and returns the value that was removed. If no index is provided, it deletes and returns the last element.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> letter = letters.pop(1)
 
@@ -225,11 +223,11 @@ There are several ways to delete elements from a list.
 "b"
 ```
 
-#### Del
+### Del
 
 If the value won't be needed after removal, `del` is more appropriate.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> del letters[1]
 
@@ -237,11 +235,11 @@ If the value won't be needed after removal, `del` is more appropriate.
 ["a", "c"]
 ```
 
-#### Del slice
+### Del slice
 
 `del` can be combined with slicing to remove multiple elements at once.
 
-``` python
+```python
 >>> letters = ["a", "b", "c", "d", "e", "f", "g"]
 >>> del letters[1:4]
 
@@ -249,11 +247,11 @@ If the value won't be needed after removal, `del` is more appropriate.
 ["a", "e", "f", "g"]
 ```
 
-#### Remove
+### Remove
 
 The `remove` operator can be used to remove elements by value instead of index.
 
-``` python
+```python
 >>> letters = ["a", "b", "c"]
 >>> letters.remove("b")
 
@@ -264,13 +262,13 @@ The `remove` operator can be used to remove elements by value instead of index.
 **The `remove` operator will only remove a single element, even if multiple elements of the same value exist in the list**
 
 
-### Strings
+## Strings
 
-#### Casting
+### Casting
 
 Because a string is a sequence of characters and a list is a sequence of elements, a string can be converted to a list just by using the `list()` definition as a type cast.
 
-``` python
+```python
 >>> name = "Rob"
 >>> list_name = list(name)
 
@@ -278,11 +276,11 @@ Because a string is a sequence of characters and a list is a sequence of element
 ["R", "o", "b"]
 ```
 
-#### Splitting
+### Splitting
 
 It is also possible to split a long string containing multiple words into a list of those words using the `split` method.
 
-``` python
+```python
 >>> sentence = "My name is Rob"
 >>> list_sentence = sentence.split()
 
@@ -294,7 +292,7 @@ The default delimiter (which is passed as a parameter to the `split` function) i
 
 This can be changed by passing a different character as a parameter to be used as a splitting delimiter.
 
-``` python
+```python
 >>> sentence = "spam-spam-spam"
 >>> list_sentence = sentence.split("-")
 
@@ -302,11 +300,11 @@ This can be changed by passing a different character as a parameter to be used a
 ["spam", "spam", "spam"]
 ```
 
-#### Joining
+### Joining
 
 `join` is the inverse of split. It takes a list of strings and concatenates the string elements into one string. This method also takes a delimiter.
 
-``` python
+```python
 >>> list_sentence = ["My", "name", "is", "Rob"]
 >>> sentence = " ".join(list_sentence)
 
@@ -314,9 +312,9 @@ This can be changed by passing a different character as a parameter to be used a
 "My name is Rob"
 ```
 
-### Objects and values
+## Objects and values
 
-``` python
+```python
 >>> first_string = "abc"
 >>> second_string = "abc"
 ```
@@ -328,7 +326,7 @@ When creating two strings of the same value there a two possibilities of how Pyt
 
 This can be determined with the `is` conditional operator.
 
-``` python
+```python
 >>> first_string is second_string
 True
 ```
@@ -337,7 +335,7 @@ This deduction shows that Python only created one string object, and both variab
 
 However, when creating two lists, this is not true.
 
-``` python
+```python
 >>> first_list = ["a", "b", "c"]
 >>> second_list = ["a", "b", "c"]
 
@@ -349,11 +347,11 @@ The two lists are **equivalent**, because they contain the same elements, but th
 
 The terms **object** and **value** are often used interchangeably, but it is more precise to say that an **object** has a **value**. Based on this we can say that the two lists have the same values, but are different objects.
 
-### Aliasing
+## Aliasing
 
 If `a` refers to an object, and `a` is assigned to `b`, then both variables refer to the same object
 
-``` python
+```python
 >>> a = [1, 2, 3]
 >>> b = a
 
@@ -367,7 +365,7 @@ An object with more than one reference has more than one name, the technical ter
 
 If the aliased object is mutable, changes made with one alias affect the other.
 
-``` python
+```python
 >>> a = [1, 2, 3]
 >>> b = a
 >>> b[0] = 42

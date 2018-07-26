@@ -19,7 +19,7 @@ The formal definition of the flow of execution of a while loop is as follows:
 
 An example of a while loop is as follows:
 
-``` python
+```python
 def countdown(number):
 
 	while number > 0:
@@ -33,7 +33,7 @@ If the `while number is greater than zero` statement is still true, the code wil
 
 It is also possible to end a while loop part way through the group of statements being run. To do this, use a `break`.
 
-``` python
+```python
 def countdown(number):
 
 	while True:
@@ -53,7 +53,7 @@ def countdown(number):
 
 `For` loops traverse every element in a sequence. The loop continues until it has been through every element.
 
-``` python
+```python
 >>> for letter in "apple":
 ...    print(letter)
 ...
