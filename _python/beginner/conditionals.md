@@ -7,16 +7,16 @@ categories: beginner
 
 Also known as the `if` statement, a conditional executes different code depending on the state of the program.
 
-### Conditional execution
+## Conditional execution
 
-``` python
+```python
 if money > 0:
 	print("You have money")
 ```
 
-### Alternative execution
+## Alternative execution
 
-``` python
+```python
 if money > 0:
 	print("You have money")
 
@@ -24,9 +24,9 @@ else:
 	print("You don't have money")
 ```
 
-### Chained conditionals
+## Chained conditionals
 
-``` python
+```python
 if money > 5:
 	print("You have a lot of money")
 
@@ -37,9 +37,9 @@ else:
 	print("You don't have money")
 ```
 
-### Nested conditionals
+## Nested conditionals
 
-``` python
+```python
 if money > 0:
 
 	if money > 5:
@@ -52,11 +52,11 @@ else:
 	print("You don't have money")
 ```
 
-### `in` operator
+## `in` operator
 
 The `in` keyword is a boolean operator that takes two strings and returns `True` if the first appears in the second, otherwise it returns `False`.
 
-``` python
+```python
 >>> "a" in "apple"
 True
 
@@ -64,7 +64,7 @@ True
 False
 ```
 
-### String comparison with relational operators
+## String comparison with relational operators
 
 Strings can be compared with the same operators used to compare numbers. In this case Python uses lexicographical ordering.
 
@@ -72,7 +72,7 @@ Lexicographical ordering uses the Unicode point number to order individual chara
 
 This means that later letters in the alphabet have a higher 'value' than earlier letters. Uppercase letters also have a lower value than their lowercase counter parts.
 
-``` python
+```python
 >>> "a" > "b"
 False
 

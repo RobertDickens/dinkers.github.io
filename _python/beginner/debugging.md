@@ -5,17 +5,17 @@ description: "Tips for debugging a Python programming problem."
 categories: beginner
 ---
 
-## If a function is not working, there are three possibilities to consider.
+## If a function is not working, there are three possibilities to consider:
 
-* There is something wrong with the arguments the function is getting; a precondition is violated.
-* There is something wrong with the function; a postcondition is violated.
+* There is something wrong with the arguments the function is getting; a pre-condition is violated.
+* There is something wrong with the function; a post-condition is violated.
 * There is something wrong with the return value or the way it is being used.
 
-## Working with big data sets can present difficulties when debugging simply due to their unwieldy size.
+## Common solutions to these problems
 
 ### Scale down the input
 
-Using a sample of the input makes it more manageable and understandable, which will make it easier to deduce how the error is occurring.
+Working with big data sets can present difficulties when debugging simply due to their unwieldy size. Using a sample of the input makes it more manageable and understandable, which will make it easier to deduce how the error is occurring.
 
 Reducing the sample size deliberately and specifically could also be a good way to find where the error is occurring.
 
