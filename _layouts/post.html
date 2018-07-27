@@ -17,7 +17,7 @@ layout: default
     <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592; {{ page.next.title }}</a>
   {% endif %}
 
-  {% if page.previous.url %}
+  {% if page.previous.url and page.next.title != "Index" %}
     <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">{{ page.previous.title }} &#8594;</a>
   {% endif %}
 
