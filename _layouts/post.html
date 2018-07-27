@@ -13,13 +13,17 @@ layout: default
 
 <div class="pagination">
 
-  {% if page.next.url and page.next.title != "Index" %}
-    <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592; {{ page.next.title }}</a>
-  {% endif %}
+  {% unless page.next.url contains "index" %}
+    {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="left arrow">&#8592; {{ page.next.title }}</a>
+    {% endif %}
+  {% endunless %}
 
-  {% if page.previous.url and page.next.title != "Index" %}
-    <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">{{ page.previous.title }} &#8594;</a>
-  {% endif %}
+  {% unless page.previous.url contains "index" %}
+    {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="right arrow">{{ page.previous.title }} &#8594;</a>
+    {% endif %}
+  {% endunless %}
 
   <a href="#" class="top">Top</a>
 
