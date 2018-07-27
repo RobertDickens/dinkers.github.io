@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Context Managers"
-description: "A context manager is a way of handling the set up and tear down required when using a persistent data store."
-category: python
+description: "A way of handling the set up and tear down required when using a persistent data store."
+categories: intermediate
 ---
 
 A context manager is a way of handling the set up and tear down required when using a persistent data store.

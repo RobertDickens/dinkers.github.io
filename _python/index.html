@@ -12,22 +12,41 @@ permalink: /:collection/index.html
 
 <div class="catalogue">
 
-  {% for post in site.python %}
-    {% if post.title != "Index" %}
 
-      <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <a href="{{ site.baseurl }}/python/beginner" class="catalogue-item">
         <div>
-          <h1 class="catalogue-title">{{ post.title | capitalize }}</h1>
+          <h1 class="catalogue-title">Beginner</h1>
           <div class="catalogue-line"></div>
 
           <p>
-            {{ post.description }}
+            Fundamental Python features and concepts.
           </p>
 
         </div>
       </a>
 
-    {% endif %}
-  {% endfor %}
+      <a href="{{ site.baseurl }}/python/intermediate" class="catalogue-item">
+        <div>
+          <h1 class="catalogue-title">Intermediate</h1>
+          <div class="catalogue-line"></div>
+
+          <p>
+            Features and techniques to increase Python proficiency.
+          </p>
+
+        </div>
+      </a>
+
+      <a href="{{ site.baseurl }}/python/advanced" class="catalogue-item">
+        <div>
+          <h1 class="catalogue-title">Advanced</h1>
+          <div class="catalogue-line"></div>
+
+          <p>
+            Push Python to it's full potential.
+          </p>
+
+        </div>
+      </a>
 
 </div>
