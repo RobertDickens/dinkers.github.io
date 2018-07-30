@@ -7,7 +7,7 @@
     <nav class="nav">
       <div class="nav-container">
 
-        <a href="{{ site.baseurl }}/">
+        <a href="{{ site.url }}/">
           {% if page.title == "Home" %}
             <h2 class="nav-title">{{ site.title }}</h2>
           {% else %}
@@ -26,7 +26,6 @@
 
     <main>
       {{ content }}
-      {{ site.baseurl }}
     </main>
 
   </body>

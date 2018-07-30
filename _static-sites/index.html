@@ -15,7 +15,7 @@ permalink: /:collection/index.html
   {% for post in site.static-sites %}
     {% if post.title != "Index" %}
 
-      <a href="{{ post.url | prepend: site.baseurl }}" class="catalogue-item">
+      <a href="{{ post.url | prepend: site.url }}" class="catalogue-item">
         <div>
           <h1 class="catalogue-title">{{ post.title | capitalize }}</h1>
           <div class="catalogue-line"></div>
