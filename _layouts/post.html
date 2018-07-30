@@ -15,13 +15,13 @@ layout: default
 
   {% unless page.previous.url contains "index" %}
     {% if page.previous.url %}
-      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="left arrow">&#8592; {{ page.previous.title }}</a>
+      <a href="{{ page.previous.url | prepend: site.url }}" class="left arrow">&#8592; {{ page.previous.title }}</a>
     {% endif %}
   {% endunless %}
 
   {% unless page.next.url contains "index" %}
     {% if page.next.url %}
-      <a href="{{ page.next.url | prepend: site.baseurl }}" class="right arrow">{{ page.next.title }} &#8594;</a>
+      <a href="{{ page.next.url | prepend: site.url }}" class="right arrow">{{ page.next.title }} &#8594;</a>
     {% endif %}
   {% endunless %}
 
