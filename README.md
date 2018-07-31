@@ -46,6 +46,8 @@ bundle exec jekyll serve
 
 ## Contributing
 
+**Create a branch for any changes and make a pull request when the changes are complete.**
+
 ### Adding a post
 
 Create a **Markdown** file in the relevant collection folder (`_python`, `_dev-ops`, `_static-sites`, etc). 
