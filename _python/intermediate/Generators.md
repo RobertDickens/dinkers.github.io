@@ -1,4 +1,9 @@
-# Generators
+---
+layout: post
+title:  "Generators"
+description: "An iterator that provides values one at a time, rather than all at once."
+categories: intermediate
+---
 
 A generator object is an iterator that provides values one at a time, rather than all at once.
 
@@ -8,16 +13,16 @@ The benefit of this is more obvious when compared to a list.
 def load_pages(urls):
 
 	html_pages = []
-	
+
 	for url in urls:
 		html_page = requests.get(url)
 		html_pages.append(html_page)
-		
+
 	return html_pages
-	
+
 ```
 
-This version of the `load_pages()` function requires all of the requests to be made, and all of the html pages to have been loaded, before anything can be done with the pages. If only the first page is required, the application must still wait until all of the pages have been downloaded before it can continue. 
+This version of the `load_pages()` function requires all of the requests to be made, and all of the html pages to have been loaded, before anything can be done with the pages. If only the first page is required, the application must still wait until all of the pages have been downloaded before it can continue.
 
 ```python
 >>> pages = load_pages(urls)
