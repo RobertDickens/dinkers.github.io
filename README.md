@@ -2,7 +2,7 @@
 
 Knowledge share site for a group of developers.
 
-## Set up local development environment
+## Setting up a local development environment
 
 ### MacOS
 
@@ -42,6 +42,44 @@ Use bundlr to build and serve the site at [http://127.0.0.1:4000/](http://127.0.
 
 ```bash
 bundle exec jekyll serve
+```
+
+## Contributing
+
+### Adding a post
+
+Create a **Markdown** file in the relevant collection folder (`_python`, `_dev-ops`, `_static-sites`, etc). 
+
+Add the front matter to the top of the file with the relevant information:
+
+```markdown
+---
+layout: post
+title:  "Decorators"
+description: "A special syntax to call a function with another function as an argument."
+categories: intermediate
+---
+```
+
+The categories attribute is optional.
+
+### Adding a collection
+
+Add the folder to the root directory of the site, with the name preceded by an underscore: 
+
+```bash
+_dev-ops
+_python
+```
+
+In the `_config.yml` add the title, description, and output under the collections header:
+
+```yaml
+collections:
+
+  python:
+    output: true
+    description: Everything you need to be useful with the Python programming language.
 ```
 
 <hr>
