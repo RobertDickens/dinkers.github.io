@@ -63,7 +63,7 @@ categories: intermediate
 ---
 ```
 
-The categories attribute is optional.
+The categories attribute is mandatory for Python and should be either **beginner**, **intermediate**, or **advanced**.
 
 ### Adding a collection
 
