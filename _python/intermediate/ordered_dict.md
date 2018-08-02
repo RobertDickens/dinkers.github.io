@@ -69,7 +69,7 @@ OrderedDict([('a', 0), ('b', 1), ('c', 2)])
 OrderedDict([('b', 1), ('c', 2)])
 ```
 
-The `move_to_end(key, last=True)` is available from Python 3.1 and onwards. This will move a key to the last position if `last` is True, and the first position if `last` is False. A `KeyError` will be raised if the key doesn't exist.
+The `move_to_end(key, last=True)` method is available from Python 3.1 and onwards. This will move a key to the last position if `last` is True, and the first position if `last` is False. A `KeyError` will be raised if the key doesn't exist.
 
 ```python
 >>> ordered_dictionary = OrderedDict.fromkeys('abcde')
