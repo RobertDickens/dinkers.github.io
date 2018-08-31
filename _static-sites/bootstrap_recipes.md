@@ -1,3 +1,9 @@
+---
+layout: post
+title:  "Bootstrap recipes"
+description: "Practical recipes for common Bootstrap use."
+---
+
 ## Single column responsive
 
 ```html
