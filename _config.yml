@@ -40,3 +40,7 @@ collections:
   static-sites:
     output: true
     description: Useful tips, tools, and workflows for creating static websites.
+
+  machine-learning:
+    output: true
+    description: Articles on machine learning.
