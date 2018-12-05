@@ -22,7 +22,7 @@ To fit a model in this example, we will use the iterative optimisation algorithm
 
 First, we need a quantitative measure of how good our model is. For each individual data point, we can work out the error simply by taking the difference between the actual value and the value predicted by our model:
 
-![](assets/errors.png)
+![](\assets/errors.png)
 
 We can then define a *loss function* (also referred to as a *cost function*): a function that evaluates how badly the model fits the data based on all the errors. One of the most common loss functions used for regression tasks is the *mean squared error*:
 
