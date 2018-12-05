@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Decision Trees"
-description: "blah."
+description: "Introduction to decision trees, which form the basis for more sophisticated algorithms."
 ---
 
 # Decision Trees
