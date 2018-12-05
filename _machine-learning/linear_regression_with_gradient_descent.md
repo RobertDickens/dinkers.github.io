@@ -22,7 +22,7 @@ To fit a model in this example, we will use the iterative optimisation algorithm
 
 First, we need a quantitative measure of how good our model is. For each individual data point, we can work out the error simply by taking the difference between the actual value and the value predicted by our model:
 
-![](assets/errors.png)
+![](\assets/errors.png)
 
 We can then define a *loss function* (also referred to as a *cost function*): a function that evaluates how badly the model fits the data based on all the errors. One of the most common loss functions used for regression tasks is the *mean squared error*:
 
@@ -76,6 +76,7 @@ This function will implement **batch gradient descent**. We'll also log the valu
 ```python
 def batch_gradient_descent(X, Y, learning_rate=0.001, n_iter=50):
     # Initialise random initial values for slope and y-intercept
+    
     m = random()
     c = random()
 
@@ -87,22 +88,22 @@ def batch_gradient_descent(X, Y, learning_rate=0.001, n_iter=50):
         predictions = m * X + c
         error = predictions - Y
 
-        # update m and c
+        # Update m and c
         new_m = m - (np.mean(error * X) * learning_rate)
         new_c = c - (np.mean(error) * learning_rate)
         m = new_m
         c = new_c
 
-        # log m, c, and mse
+        # Log m, c, and mse
         mse = np.mean((m * X + c - Y)**2)
         logged_mse.append(mse)
         logged_m.append(m)
         logged_c.append(c)
 
-        # make log dataframe
+        # Make log dataframe
         log = pd.DataFrame({'mse': logged_mse,
-                             'm': logged_m,
-                             'c': logged_c})
+                            'm': logged_m,
+                            'c': logged_c})
 
         return m, c, log
 ```
@@ -112,6 +113,7 @@ We'll also write a function to implement stochastic gradient descent, which will
 ```python
 def stochastic_gradient_descent(X, Y, learning_rate=0.001, epochs=5):
     # Initialise random initial values for slope and y-intercept
+    
     m = random()
     c = random()
 
@@ -120,7 +122,7 @@ def stochastic_gradient_descent(X, Y, learning_rate=0.001, epochs=5):
     logged_c = []
 
     for _ in range(epochs):
-        # update m and c
+        # Update m and c
         for ix in range(len(X)):
             prediction = m * X[ix] + c
             error = prediction - Y[ix]
@@ -136,7 +138,7 @@ def stochastic_gradient_descent(X, Y, learning_rate=0.001, epochs=5):
             logged_m.append(m)
             logged_c.append(c)
 
-    # make log dataframe
+    # Make log dataframe
     iter_log = pd.DataFrame({'mse': logged_mse,
                              'm': logged_m,
                              'c': logged_c})
@@ -170,7 +172,7 @@ As with simple linear regression, we can use the chain rule to find the partial 
 
 $$\frac{\partial f}{\partial \theta_m} = x_m$$
 
-it follows that:
+It follows that:
 
 $$\frac{\partial \boldsymbol{J}}{\partial \theta_m} =  \frac{1}{n} \displaystyle \sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)}) x_m$$
 
@@ -247,5 +249,6 @@ coefs = dict(zip(train_input.columns, linear_model.coef_))
 To make predictions using the model we call the `.predict()` method:
 
 ```python
-linear_model.predict(X=train_input) # returns an array of predicted values.
+# Returns an array of predicted values.
+linear_model.predict(X=train_input)
 ```
