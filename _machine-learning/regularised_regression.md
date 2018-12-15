@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Regularised Regression"
-description: "Notes on regularised regression."
+description: "Improving the interpretability of a model."
 ---
 
 ## Regularised Regression
