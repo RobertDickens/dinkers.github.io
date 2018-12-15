@@ -43,4 +43,4 @@ collections:
 
   machine-learning:
     output: true
-    description: Articles on machine learning.
+    description: Machine learning concepts and Python implmenetaions.
