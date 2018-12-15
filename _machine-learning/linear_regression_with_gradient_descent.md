@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linear Regression with Gradient Descent"
-description: "Linear regression from scratch in python."
+description: "Using Python to describe a dependent variable as a linear function of one or more independent variables."
 ---
 
 Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.  
@@ -54,7 +54,7 @@ $$ c' = c - \displaystyle \sum_{i=1}^{n} (mx^{(i)} + c - y_{actual}) \times lear
 
 Note that we are calculating this error over the entire dataset at each iteration. This is known as *batch gradient descent*. If the dataset is large this can be a costly operation, so we could instead update based on a subset of the data at each iteration, which is known as *minibatch gradient descent*. If we reduce the size of the data set to one training example per iteration this is known as *stochastic gradient descent*.
 
-# Simple Linear Regression From Scratch in Python
+# Python implementation of Simple Linear Regression
 
 First, let's create some data which we can use to fit a model. We'll create some data using the function *y = mx + c* setting m=3 and c=5, then add some random noise.
 
@@ -179,7 +179,7 @@ So, the update function for $$\theta_m$$ at each iteration is:
 $$ \theta_m' = \theta_m -  \frac{1}{n} \displaystyle \sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)}) x_m$$
 
 
-# Linear Regression with Scikit-Learn
+# Implementing Linear Regression with Scikit-Learn
 
 In this example we'll use the popular **Scikit-Learn** library to fit a multivariate linear regression model. We'll use publicly available data on Melbourne house prices (available on Kaggle https://www.kaggle.com/anthonypino/melbourne-housing-market/home) to fit a model of house price as a function of land size, number of rooms and house type.
 
