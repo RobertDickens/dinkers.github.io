@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Linear Regression with Gradient Descent"
-description: "Using Python to describe a dependent variable as a linear function of one or more independent variables."
+description: "Derivation of the gradient descent algorithm for linear regression and implementation in python."
 ---
 
 Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.  

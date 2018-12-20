@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Logistic Regression"
-description: "Implementing linear algorithm for classification tasks in Python"
+description: "Using a linear model for classification tasks in Python"
 ---
 
 Logistic Regression is linear algorithm for classification tasks. It outputs the *probability that an instance belongs to a particular class*. If the model outputs a probability greater than 0.5, the model will predict that the instance belongs to that class. In the later sections of this article we will use data from the classic Iris flower data set (https://en.wikipedia.org/wiki/Iris_flower_data_set). Our objective will be to classify if a flower is of the species 'Setosa' or 'Versicolor' based on the length and width of the sepals.
