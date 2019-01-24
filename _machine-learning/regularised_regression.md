@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Regularised Regression"
-description: "Improving the interpretability of a model."
+description: "Regularisation techniques to simplify models, in order to avoid overfitting and improve interpretability"
 ---
 
 ## Regularised Regression

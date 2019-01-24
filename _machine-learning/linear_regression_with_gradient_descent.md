@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Linear Regression with Gradient Descent"
-description: "Using Python to describe a dependent variable as a linear function of one or more independent variables."
+description: "Deriving the gradient descent algorithm to fit a linear regression model and implementing it in Python"
 ---
 
-Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.  
+Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.
 
 For simplicity, we'll begin with the case of a single independent variable, which is referred to as *simple linear regression*. In this case, the function that models dependent variable *y* with respect to an independent variable *x* has the form:
 
@@ -74,7 +74,7 @@ This function will implement **batch gradient descent**. We'll also log the valu
 ```python
 def batch_gradient_descent(X, Y, learning_rate=0.001, n_iter=50):
     # Initialise random initial values for slope and y-intercept
-    
+
     m = random()
     c = random()
 
@@ -111,7 +111,7 @@ We'll also write a function to implement stochastic gradient descent, which will
 ```python
 def stochastic_gradient_descent(X, Y, learning_rate=0.001, epochs=5):
     # Initialise random initial values for slope and y-intercept
-    
+
     m = random()
     c = random()
 
@@ -183,7 +183,7 @@ $$ \theta_m' = \theta_m -  \frac{1}{n} \displaystyle \sum_{i=1}^{n}(f(x^{(i)}) -
 
 In this example we'll use the popular **Scikit-Learn** library to fit a multivariate linear regression model. We'll use publicly available data on Melbourne house prices (available on Kaggle https://www.kaggle.com/anthonypino/melbourne-housing-market/home) to fit a model of house price as a function of land size, number of rooms and house type.
 
-First we'll import the Pandas library, the LinearRegression class from Sklearn and the csv containing the housing data. The pandas `.info()` method provides a convenient way to see some information about the dataframe.  
+First we'll import the Pandas library, the LinearRegression class from Sklearn and the csv containing the housing data. The pandas `.info()` method provides a convenient way to see some information about the dataframe.
 
 ```python
 import pandas as pd
