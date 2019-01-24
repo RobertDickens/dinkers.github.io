@@ -44,3 +44,7 @@ collections:
   machine-learning:
     output: true
     description: Machine learning concepts and Python implmenetaions.
+
+  quickstart:
+    output: true
+    description: Get up and running as quickly as possible with frameworks and technologies.

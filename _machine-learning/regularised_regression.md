@@ -8,7 +8,7 @@ description: "Improving the interpretability of a model."
 
 Regularisation is a technique that constrains a model. For linear models regularization is usually achieved by shrinking the values of the coefficients or setting some coefficient to zero. There are two reasons why this may be advantageous compared to the vanilla least squares approach. Firstly, regularisation can reduce the bias of the model, reducing the risk of overfitting and potentially improving the predictive accuracy of the model. Secondly, regularisation can improve the interpretability of the model by identifying the predictors that are most relevant.
 
-The three main regularisation algorithms for linear models are: Ridge Regression, Lasso Regression and Elastic Net. In each of these algorithms, a regularisation term is added to the cost function that forces the algorithm to keep the weights as small as possible.  
+The three main regularisation algorithms for linear models are: Ridge Regression, Lasso Regression and Elastic Net. In each of these algorithms, a regularisation term is added to the cost function that forces the algorithm to keep the weights as small as possible.
 
 **Ridge regression** penalises large weights by adding the L2 norm to the cost function.
 
@@ -61,16 +61,16 @@ We can then move on to the penalty term. At $$\theta_{m}<0$$  and $$\theta_{m}>0
 
 $$\frac{\partial J}{\partial \theta_m} =
 \begin{cases}
-  -\rho_{m}+\theta_{m}z_{m}+\alpha & \text{for }\theta_{m} > 0\\    
+  -\rho_{m}+\theta_{m}z_{m}+\alpha & \text{for }\theta_{m} > 0\\
   [-\rho_{j} - \alpha, -\rho_{j} + \alpha] & \text{for }\theta_{m} = 0\\
-  -\rho_{m}+\theta_{m}z_{m}-\alpha & \text{for }\theta_{m} < 0\\   
+  -\rho_{m}+\theta_{m}z_{m}-\alpha & \text{for }\theta_{m} < 0\\
 \end{cases}$$
 
 Setting this to 0 and solving for $$\theta_{j}$$ gives the one dimensional optimisation for the lasso cost function:
 
 $$\theta_{m} =
 \begin{cases}
-  -\rho_{m}+\theta_{m}z_{m}+\alpha & \text{if }\rho_{m} < -\alpha/2\\    
+  -\rho_{m}+\theta_{m}z_{m}+\alpha & \text{if }\rho_{m} < -\alpha/2\\
   [-\rho_{j} - \alpha, -\rho_{j} + \alpha] & \text{if }\rho_{m} \text{ in } [-\alpha/2, \alpha/2]\\
-  -\rho_{m}+\theta_{m}z_{m}-\alpha & \text{if }\rho_{m} > \alpha/2\\   
+  -\rho_{m}+\theta_{m}z_{m}-\alpha & \text{if }\rho_{m} > \alpha/2\\
 \end{cases}$$
