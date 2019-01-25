@@ -1,14 +1,10 @@
 ---
 layout: post
 title:  "Linear Regression with Gradient Descent"
-description: "Linear regression from scratch in python."
+description: "Deriving the gradient descent algorithm to fit a linear regression model and implementing it in Python"
 ---
 
-## Linear Regression with Gradient Descent
-
-### Simple Linear Regression
-
-Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.  
+Linear regression is one of the most simple and commonly used techniques in statistical analysis and machine learning. A linear regression model describes a dependent variable as a linear function of one or more independent variables.
 
 For simplicity, we'll begin with the case of a single independent variable, which is referred to as *simple linear regression*. In this case, the function that models dependent variable *y* with respect to an independent variable *x* has the form:
 
@@ -17,7 +13,7 @@ $$y(x) = mx + c$$
 This function is a straight line, with slope *m* and y-intercept *c*
 
 
-### Gradient Descent
+# Gradient Descent
 To fit a model in this example, we will use the iterative optimisation algorithm *gradient descent*.
 
 First, we need a quantitative measure of how good our model is. For each individual data point, we can work out the error simply by taking the difference between the actual value and the value predicted by our model:
@@ -58,7 +54,8 @@ $$ c' = c - \displaystyle \sum_{i=1}^{n} (mx^{(i)} + c - y_{actual}) \times lear
 
 Note that we are calculating this error over the entire dataset at each iteration. This is known as *batch gradient descent*. If the dataset is large this can be a costly operation, so we could instead update based on a subset of the data at each iteration, which is known as *minibatch gradient descent*. If we reduce the size of the data set to one training example per iteration this is known as *stochastic gradient descent*.
 
-### Simple Linear Regression From Scratch in Python
+# Python implementation of Simple Linear Regression
+
 First, let's create some data which we can use to fit a model. We'll create some data using the function *y = mx + c* setting m=3 and c=5, then add some random noise.
 
 ```python
@@ -72,11 +69,12 @@ plt.scattter(X, Y)
 plt.show()
 ```
 
-This function will implement **batch gradient descent**. We'll also log the values of m, c and MSE at each iteration to examine later
+This function will implement **batch gradient descent**. We'll also log the values of m, c and MSE at each iteration to examine later.
+
 ```python
 def batch_gradient_descent(X, Y, learning_rate=0.001, n_iter=50):
     # Initialise random initial values for slope and y-intercept
-    
+
     m = random()
     c = random()
 
@@ -113,7 +111,7 @@ We'll also write a function to implement stochastic gradient descent, which will
 ```python
 def stochastic_gradient_descent(X, Y, learning_rate=0.001, epochs=5):
     # Initialise random initial values for slope and y-intercept
-    
+
     m = random()
     c = random()
 
@@ -154,7 +152,7 @@ Now we can run both versions of gradient descent and examine how the values of $
 
 Batch gradient descent progresses smoothly through parameter space towards the minimum, while stochastic gradient descent takes a more erratic path and bounces around the minimum. This behaviour can be both a blessing and a curse. The negative is that it won't converge to real minimum. However this can help the algorithm bounce out of local minima in which batch gradient descent would get stuck. Stochastic therefore has more chance of finding the global minimum that batch.
 
-### Multivariate Linear Regression
+# Multivariate Linear Regression
 
 The case of more than one independent variable is called *Multivariate Linear Regression*. In this case, the function for the dependent variable $$Y$$ as a function of an arbitrary number of independent $$x$$ variables is:
 
@@ -181,10 +179,11 @@ So, the update function for $$\theta_m$$ at each iteration is:
 $$ \theta_m' = \theta_m -  \frac{1}{n} \displaystyle \sum_{i=1}^{n}(f(x^{(i)}) - y^{(i)}) x_m$$
 
 
-### Linear Regression with Scikit-Learn
+# Implementing Linear Regression with Scikit-Learn
+
 In this example we'll use the popular **Scikit-Learn** library to fit a multivariate linear regression model. We'll use publicly available data on Melbourne house prices (available on Kaggle https://www.kaggle.com/anthonypino/melbourne-housing-market/home) to fit a model of house price as a function of land size, number of rooms and house type.
 
-First we'll import the Pandas library, the LinearRegression class from Sklearn and the csv containing the housing data. The pandas `.info()` method provides a convenient way to see some information about the dataframe.  
+First we'll import the Pandas library, the LinearRegression class from Sklearn and the csv containing the housing data. The pandas `.info()` method provides a convenient way to see some information about the dataframe.
 
 ```python
 import pandas as pd

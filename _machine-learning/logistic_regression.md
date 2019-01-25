@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Logistic Regression"
-description: "Logistic Regression from scratch in python."
+description: "Implementing a linear model for classification tasks in Python"
 ---
 
-## Logistic Regression
 Logistic Regression is linear algorithm for classification tasks. It outputs the *probability that an instance belongs to a particular class*. If the model outputs a probability greater than 0.5, the model will predict that the instance belongs to that class. In the later sections of this article we will use data from the classic Iris flower data set (https://en.wikipedia.org/wiki/Iris_flower_data_set). Our objective will be to classify if a flower is of the species 'Setosa' or 'Versicolor' based on the length and width of the sepals.
 
 ![](/assets/setosa_versicolor.png)
@@ -43,10 +42,11 @@ This cost function has the advantage that it is convex, so an optimization algor
 
 $$\frac{\partial J}{\partial \theta_{j}} = \frac{1}{n} \displaystyle \sum_{i=1}^{n}(g(\theta^T\boldsymbol{x})-y^{(i)})x_{j}^{(i)}$$
 
-#### Logistic Regression from Scratch in Python
+# Python implementation of Logistic Regression
 
 ```python
 class LogisticRegression:
+
     def __init__(self, learning_rate=0.001, epochs=1000):
         self.theta = None
         self.learning_rate = learning_rate
@@ -57,6 +57,7 @@ class LogisticRegression:
 
     def predict_probability(self, X, theta):
         return self.sigmoid(np.dot(X, theta))
+
 
 def stochastic_gradient_descent(self, X, y):
     # Add intercept to input data
@@ -73,14 +74,17 @@ def stochastic_gradient_descent(self, X, y):
 
   return theta
 
+
 def fit(self, X, y):
   self.theta = self.stochastic_gradient_descent(X, y)
+
 
 def predict_proba(self, X):
   intercept = np.ones((X.shape[0], 1))
   X = np.concatenate((intercept, X), axis=1)
 
   return np.array([self.predict_probability(self.theta, x) for x in X])
+
 
 def predict(self, X):
   proba_predictions = self.predict_proba(X)
