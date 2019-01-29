@@ -15,7 +15,7 @@ AdaBoost (short for **Ada**ptive **Boost**ing) was the first practical boosting 
 AdaBoost works by sequentially training a series of weak classifiers (most commonly decision trees with a single node, known as *decision stumps*), with each classifier giving more weight to training examples that were incorrectly classified in the previous iteration. The final model is a weighted sum of all the classifiers.
 
 The AdaBoost algorithm proceeds as follows:
-1. Initialise the observation weights, giving equal weight to each training example: $$w_i$$ = 1/N for a training set with N examples..
+1. Initialise the observation weights, giving equal weight to each training example: $$w_i$$ = 1/N for a training set with N examples.
 2. For $$m$$ in $$M$$ iterations:
 
     a. Fit a classifier $$G_m(x)$$ to the training data.
