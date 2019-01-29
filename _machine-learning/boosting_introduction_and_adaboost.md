@@ -1,9 +1,8 @@
 ---
 layout: post
 title:  "Boosting Part 1: Introduction and AdaBoost"
-description: "An introduction to the concept of boosting and a guide to the AdaBoost algorithm.."
+description: "An introduction to the concept of boosting and a guide to the AdaBoost algorithm."
 ---
-
 
 # Boosting Introduction
 Boosting is an ensemble machine learning method that converts weak learners (a learner that is slightly better than random guessing) into strong learners. Boosting is a sequential process, each learner is trained using information from the previous learner. This is in contrast to *bagging*, in which the learners are trained in parallel (e.g. in the Random Forest algorithm).
@@ -11,9 +10,9 @@ Boosting is an ensemble machine learning method that converts weak learners (a l
 We will look at two boosting algorithms: AdaBoost and Gradient Boosting (see part 2). Both these algorithms create a strong learner from weak learners, however they differ in how they create the weak learners during the training process.
 
 ## AdaBoost
-AdaBoost (short for Adaptive Boosting) was the first practical boosting algorithm. It was introduced by Freund and Schapire in 1997, who later went on to win the Gödel prize for the work.
+AdaBoost (short for **Ada**ptive **Boost**ing) was the first practical boosting algorithm. It was introduced by Freund and Schapire in 1997, who later went on to win the Gödel prize for the work.
 
-AdaBoost works by sequentially training a series of weak classifiers (most commonly decision trees with a single node, known as *decision stumps*), with each classifiers giving more weight to training examples that were incorrectly classified in the previous iteration. The final model is a weighted sum of all the classifiers.
+AdaBoost works by sequentially training a series of weak classifiers (most commonly decision trees with a single node, known as *decision stumps*), with each classifier giving more weight to training examples that were incorrectly classified in the previous iteration. The final model is a weighted sum of all the classifiers.
 
 The AdaBoost algorithm proceeds as follows:
 1. Initialise the observation weights, giving equal weight to each training example: $$w_i$$ = 1/N for a training set with N examples..
@@ -55,7 +54,7 @@ class AdaBoostClassifier:
         self.weights = None
 
     def fit(self, X, y):
-        # Initialise weights if firt iteration
+        # Initialise weights if first iteration
         for n in range(self.n_iterations):
 
             if self.weights is None:
@@ -76,8 +75,9 @@ class AdaBoostClassifier:
             err_m = np.dot(self.weights, misclassified_i) / np.sum(self.weights)
             epsilon = 1e-5
             err_m = err_m + epsilon
-            alpha_m = 0.5 * np.log((1 - err_m)/err_m)
-            # update weights
+            alpha_m = 0.5 * np.log((1 - err_m) / err_m)
+
+            # Update weights
             update_factors = np.exp(alpha_m * misclassified_sign)
             updated_weights = self.weights * update_factors
             self.weights = updated_weights
@@ -86,6 +86,7 @@ class AdaBoostClassifier:
 
             self.clfs.append(deepcopy(base_clf))
             self.clf_alphas.append(alpha_m)
+
 
     def predict(self, X):
         predictions = []
