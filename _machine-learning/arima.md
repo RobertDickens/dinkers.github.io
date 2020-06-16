@@ -14,7 +14,7 @@ An autoregression model forecasts a variable using a linear combination of its p
 
 $$\begin{equation} y_{t} = c + \sum_{i=1}^{p}\theta_{i}y_{t-i} + \varepsilon_{t} \tag{1} \end{equation}$$
 
-where $c$ is some constant, $\theta$ is the regression coefficients and $\varepsilon_{t}$ is white noise. The $p$ term is the number of previous values to take, which is known as the order of the AR model. E.g. an AR(2) model would be a model that uses the previous 2 values. 
+where $$c$$ is some constant, $$\theta$$ is the regression coefficients and $$\varepsilon_{t}$$ is white noise. The $$p$$ term is the number of previous values to take, which is known as the order of the AR model. E.g. an AR(2) model would be a model that uses the previous 2 values. 
 
 #### Moving Average (MA)
 
@@ -22,7 +22,7 @@ A moving average model is similar to the AR model, but it uses the past forecast
 
 $$\begin{equation} y_{t} = c + \sum_{i=1}^{q}\phi_{i}\varepsilon_{t-i} + \varepsilon_{t} \tag{2} \end{equation}$$
 
-where $c$ is some constant, $\phi$ is the regression coefficient and $\varepsilon$ is the error. The $q$ term is the number of previous error values to take, which again is known as the order of the model. An MA model should not be confused with moving average *smoothing* models. 
+where $$c$$ is some constant, $$\phi$$ is the regression coefficient and $$\varepsilon$$ is the error. The $$q$$ term is the number of previous error values to take, which again is known as the order of the model. An MA model should not be confused with moving average *smoothing* models. 
 
 AR and MA models can be combined into an ARMA(p, q) model. 
 
@@ -38,4 +38,4 @@ An ARIMA(p, d, q) model is the combination of the above three components:
 
 $$\begin{equation}  y'_{t} = c + \sum_{i=1}^{p}\theta_{i}y'_{t-i} + \sum_{i=1}^{q}\phi_{i}\varepsilon_{t-i} +  \varepsilon_{t} \tag{3} \end{equation}$$
 
-where $y'$ is the time series $y$ differenced by order $d$. 
+where $$y'$$ is the time series $$y$$ differenced by order $$d$$. 
